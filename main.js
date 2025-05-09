@@ -27,19 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedGrade = document.getElementById("grade").value;
     renderMap();
   }
-
-  function renderMap() {
-    app.innerHTML = \`
-      <h2>Woodland Village</h2>
-      <button onclick="enterBuilding('hospital')">Hospital</button>
-      <button onclick="enterBuilding('home')">Player Home</button>
-       <button onclick="enterBuilding('workshop')">Workshop</button>
-       <button onclick="enterBuilding('townhall')">Townhall</button>
-       <button onclick="enterBuilding('store')">Convenience Store</button>
-       <button onclick="enterBuilding('lab')">Science Lab</button>
-      <button onclick="renderStart()">Back</button>
-      <p>Coins: <span id="coinCount">\${coins}</span></p>
-    \`;
+function renderMap() {
+  app.innerHTML = `
+    <h2>Woodland Village</h2>
+    <button onclick="enterBuilding('home')">Player Home</button>
+    <button onclick="enterBuilding('workshop')">Workshop</button>
+    <button onclick="enterBuilding('townhall')">Townhall</button>
+    <button onclick="enterBuilding('store')">Convenience Store</button>
+    <button onclick="enterBuilding('hospital')">Hospital</button>
+    <button onclick="enterBuilding('lab')">Science Lab</button>
+    <p>Coins: <span id="coinCount">${coins}</span></p>
+    <button onclick="renderStart()">Back</button>
+  `;
+}
+  
   }
 
   function enterBuilding(type) {
